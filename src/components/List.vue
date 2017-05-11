@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <note-list-item v-for="i in 10"></note-list-item>
+      <note-list-item v-for="i in 20" :key="i"></note-list-item>
     </ul>
   </div>
 </template>
@@ -19,5 +19,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 </style>

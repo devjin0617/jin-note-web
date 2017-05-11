@@ -35,6 +35,11 @@ export default {
     display: flex;
     flex-direction: column;
 
+    .editor-toolbar {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
     .CodeMirror {
       flex:1;
     }
