@@ -30,6 +30,10 @@ export default {
 </script>
 
 <style lang="scss">
+.cm-quote-1 {
+  color:gray;
+}
+
 .editor {
   > div {
     height: 100%;
