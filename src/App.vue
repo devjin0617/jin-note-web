@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <div class="list">
-    </div>
+    <note-list class="list"></note-list>
     <div class="editor">
       <router-view></router-view>
     </div>
@@ -9,8 +8,13 @@
 </template>
 
 <script>
+import List from './components/List'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    'note-list': List
+  }
 }
 </script>
 
