@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <div class="list">
+    </div>
+    <div class="editor">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -11,13 +14,21 @@ export default {
 }
 </script>
 
-<style>
+<style lang='scss'>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  height:100vh;
+
+  > div {
+    border:1px solid #b5b5b5;
+  }
+
+  .list {
+    flex:1
+  }
+
+  .editor {
+    flex:2
+  }
 }
 </style>
