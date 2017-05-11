@@ -1,8 +1,13 @@
 <template>
   <div id="app">
-    <note-list class="list"></note-list>
-    <div class="editor">
-      <router-view></router-view>
+    <div class="navibar">
+      <span>JIN NOTE</span>
+    </div>
+    <div class="main">
+      <note-list class="list"></note-list>
+      <div class="editor">
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -22,13 +27,27 @@ export default {
 #app {
   display: flex;
   height:100vh;
+  flex-direction:column;
 
-  > div {
+  .navibar {
+    width:100%;
+    height:40px;
+    background-color:#333333;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .main {
     border:1px solid #b5b5b5;
+    flex:1;
+    display:flex;
   }
 
   .list {
-    flex:1
+    flex:1;
+    overflow:scroll;
   }
 
   .editor {
