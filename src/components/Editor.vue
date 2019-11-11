@@ -1,6 +1,6 @@
 <template>
   <div>
-    <textarea id="note-editor">{{text}}</textarea>
+    <textarea id="note-editor" v-model="text"></textarea>
   </div>
 </template>
 
@@ -12,9 +12,6 @@ export default {
     return {
       text: ''
     }
-  },
-  created () {
-
   },
   mounted () {
     const options = {
