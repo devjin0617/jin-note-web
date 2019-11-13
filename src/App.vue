@@ -1,57 +1,32 @@
 <template>
   <div id="app">
-    <div class="navibar">
-      <span>JIN NOTE</span>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
-    <div class="main">
-      <note-list class="list"></note-list>
-      <div class="editor">
-        <router-view></router-view>
-      </div>
-    </div>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import List from './components/List'
-
-export default {
-  name: 'app',
-  components: {
-    'note-list': List
-  }
-}
-</script>
-
-<style lang='scss'>
+<style lang="scss">
 #app {
-  display: flex;
-  height:100vh;
-  flex-direction:column;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
-  .navibar {
-    width:100%;
-    height:40px;
-    background-color:#333333;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
+#nav {
+  padding: 30px;
 
-  .main {
-    border:1px solid #b5b5b5;
-    flex:1;
-    display:flex;
-  }
+  a {
+    font-weight: bold;
+    color: #2c3e50;
 
-  .list {
-    flex:1;
-    overflow:scroll;
-  }
-
-  .editor {
-    flex:2
+    &.router-link-exact-active {
+      color: #42b983;
+    }
   }
 }
 </style>
